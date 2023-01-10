@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         //перегрузка метода
         PrintUtils print = new PrintUtils(1);
-        PrintUtils print = new PrintUtils("Hello");
+       // PrintUtils print = new PrintUtils("Hello");
         System.out.println(print);
         System.out.println(print);
         // метод, который принимает в качестве параметра любую строку, например ""I like Java!"

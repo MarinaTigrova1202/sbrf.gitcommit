@@ -1,11 +1,13 @@
 package ru.sbrf.gitcommit.week2;
 
 public class Person {
-    public String name = "Marina";
-    public String taxId = "120286";
-        public Person (String n,String t) {
-        name = n;
-        taxId = t;
+    public String name;
+    public String taxId;
+
+    public Person(){}
+    public Person (String name,String taxId) {
+        this.name = name;
+        this.taxId = taxId;
     }
 
     @Override

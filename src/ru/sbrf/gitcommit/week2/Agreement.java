@@ -1,9 +1,16 @@
 package ru.sbrf.gitcommit.week2;
 
 public class Agreement {
-    String reference = "Соглашение";
-    Money amount = new Money();
-    Person applicant = new Person("Света","110890");
+    String reference;
+    Money amount;
+    Person applicant;
+    public Agreement(){}
+    public Agreement(String reference, Money amount, Person applicant) {
+        this.reference = reference;
+        this.amount = amount;
+        this.applicant = applicant;
+    }
+
 
     @Override
     public String toString() {
