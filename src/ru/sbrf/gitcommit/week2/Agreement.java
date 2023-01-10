@@ -4,8 +4,8 @@ public class Agreement {
     String reference;
     Money amount;
     Person applicant;
-    public Agreement(){}
-    public Agreement(String reference, Money amount, Person applicant) {
+    protected Agreement(){}
+    protected Agreement(String reference, Money amount, Person applicant) {
         this.reference = reference;
         this.amount = amount;
         this.applicant = applicant;

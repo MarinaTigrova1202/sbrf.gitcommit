@@ -1,5 +1,7 @@
 package ru.sbrf.gitcommit.week3;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         //перегрузка метода
@@ -27,5 +29,12 @@ public class Main {
         System.out.println(words.toLowerCase());
         // Вырезать строку Java c помощью метода String.substring().
         System.out.println(words.substring(7,11));
+        
+        //Дата и время
+        LocalDate today = LocalDate.now();
+        System.out.println("Сегодня = " + today);
+        LocalDate FourMonthAgo = today.minusMonths(4);
+        System.out.println("Четыре месяца назад было = " + FourMonthAgo);
+        System.out.println("Текущий месяц = " + today.getMonth());
     }
 }
