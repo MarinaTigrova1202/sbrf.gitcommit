@@ -1,10 +1,13 @@
 package ru.sbrf.gitcommit.week2;
 
 public class Money {
-        public long amount;
-        public String currency;
-    public Money(){}
-    public Money (long amount,String currency) {
+    private long amount;
+    private String currency;
+
+    public Money() {
+    }
+
+    public Money(long amount, String currency) {
         this.amount = amount;
         this.currency = currency;
     }
@@ -15,5 +18,21 @@ public class Money {
                 "amount=" + amount +
                 ", currency='" + currency + '\'' +
                 '}';
+    }
+
+    public long getAmount() {
+        return amount;
+    }
+
+    public void setAmount(long amount) {
+        this.amount = amount;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 }

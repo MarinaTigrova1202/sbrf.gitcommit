@@ -5,15 +5,14 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
         //перегрузка метода
-        PrintUtils print = new PrintUtils(1);
-       // PrintUtils print = new PrintUtils("Hello");
-        System.out.println(print);
-        System.out.println(print);
+        System.out.println(PrintUtils.print(1));
+        System.out.println(PrintUtils.print("Hello"));
+
         // метод, который принимает в качестве параметра любую строку, например ""I like Java!"
         String words = "I like Java!";
         // Распечатать последний символ строки. Используем метод String.charAt() и length()
         System.out.println(words.length());
-        int index = (words.length()-1);
+        int index = (words.length() - 1);
         System.out.println(words.charAt(index));
         // Проверить, заканчивается ли строка подстрокой “!”. Используем метод String.endsWith().
         System.out.println(words.endsWith("!"));
@@ -28,8 +27,13 @@ public class Main {
         // Преобразуйте строку к нижнему регистру.
         System.out.println(words.toLowerCase());
         // Вырезать строку Java c помощью метода String.substring().
-        System.out.println(words.substring(7,11));
-        
+        System.out.println(words.substring(7, 11));
+
+        //классы обертки
+        Wrapper wrapper = new Wrapper();
+        System.out.println(wrapper.numberZero);
+        System.out.println(wrapper.numberNull);
+
         //Дата и время
         LocalDate today = LocalDate.now();
         System.out.println("Сегодня = " + today);

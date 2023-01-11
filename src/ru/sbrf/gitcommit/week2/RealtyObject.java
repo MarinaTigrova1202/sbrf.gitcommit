@@ -1,8 +1,8 @@
 package ru.sbrf.gitcommit.week2;
 
 public class RealtyObject {
-    protected String name = new String();
-    protected String address = new String();
+    private String name = new String();
+    private String address = new String();
 
     public String getName() {
         return name;
