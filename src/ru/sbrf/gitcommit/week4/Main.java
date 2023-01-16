@@ -114,5 +114,13 @@ public class Main {
             default:
                 System.out.println("ни одно из предыдущих условий не подошло");
         }
+
+        System.out.println();
+        System.out.println("Массив");
+        int[] numbers = new int[6];
+        for (int i = 0; i<numbers.length; i++){
+            numbers[i] = i+5;
+            System.out.println(numbers[i]);
+        }
     }
 }
