@@ -1,5 +1,7 @@
 package ru.sbrf.gitcommit.week4;
 
+import ru.sbrf.gitcommit.week4.service.AgreementService;
+
 import java.util.Scanner;
 
 public class Main {
@@ -15,7 +17,7 @@ public class Main {
             } else {
                 System.out.println(value);
             }
-            value = value + 2;
+            value += 2;
         }
 
         value = 9;
@@ -43,7 +45,7 @@ public class Main {
         }
 
         number = 0;
-        for (value = 9; value >= 0; value = value - 2) {
+        for (value = 9; value >= 0; value -= 2) {
             number++;
             if (number % 3 == 0) {
                 System.out.println(value + "!");
@@ -63,7 +65,7 @@ public class Main {
             } else {
                 System.out.println(value);
             }
-            value = value + 2;
+            value += 2;
         } while (value <= 10);
 
         value = 9;
@@ -118,9 +120,14 @@ public class Main {
         System.out.println();
         System.out.println("Массив");
         int[] numbers = new int[6];
-        for (int i = 0; i<numbers.length; i++){
-            numbers[i] = i+5;
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i + 5;
             System.out.println(numbers[i]);
         }
+
+        Agreement agreementMain = new Agreement(AgreementStatus.ACTIVE);
+        AgreementService agreementService = new AgreementService();
+        agreementService.close(agreementMain);
+        System.out.println(agreementMain.getAgreementStatus());
     }
 }
