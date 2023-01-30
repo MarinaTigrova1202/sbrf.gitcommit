@@ -1,8 +1,7 @@
 package ru.sbrf.gitcommit.week5;
+//"Создать абстрактный класс Operation
+// типизированный абстрактным классом Agreement либо его наследниками.
+public abstract class Operation<T extends Agreement> {
 
-public abstract class Operation {
-    public abstract class Agreement<T extends Agreement> {
-        public T text;
 
-    }
 }
