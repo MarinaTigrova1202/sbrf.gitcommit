@@ -4,30 +4,22 @@ import java.util.Objects;
 
 public class Login {
     public static boolean Autorisation(String login, String password, String confirmPassword) {
+
+        try {
             if (login.length() > 20 & !login.matches("\\w")) {
-                try {
-                    run();
-                } catch (WrongLoginException | WrongPasswordException e){
-                e.printStackTrace();
-                return false;
-            }
+                run();
             } else if (password.length() > 20 & !password.matches("\\w")) {
-                try {
-                    run();
-                } catch (WrongLoginException | WrongPasswordException e){
-                    e.printStackTrace();
-                    return false;
-                }
+                run();
             } else if (!Objects.equals(confirmPassword, password)) {
-                try {
-                    run();
-                } catch (WrongLoginException | WrongPasswordException e){
-                    e.printStackTrace();
-                    return false;
-                }
+                run();
             }
-            return true;
-            }
+        } catch (WrongLoginException | WrongPasswordException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
     public static void run() throws WrongLoginException, WrongPasswordException {
     }
 }
