@@ -7,19 +7,16 @@ public class Login {
 
         try {
             if (login.length() > 20 & !login.matches("\\w")) {
-                run();
+                throw new WrongLoginException("Incorrect login");
             } else if (password.length() > 20 & !password.matches("\\w")) {
-                run();
+                throw new WrongPasswordException("Incorrect password");
             } else if (!Objects.equals(confirmPassword, password)) {
-                run();
+                throw new WrongPasswordException("Incorrect confirmPassword");
             }
         } catch (WrongLoginException | WrongPasswordException e) {
             e.printStackTrace();
             return false;
         }
         return true;
-    }
-
-    public static void run() throws WrongLoginException, WrongPasswordException {
     }
 }
