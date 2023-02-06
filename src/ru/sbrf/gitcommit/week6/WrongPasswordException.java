@@ -1,5 +1,11 @@
 package ru.sbrf.gitcommit.week6;
 
-public class WrongPasswordException {
-    public WrongPasswordException(){};
+public class WrongPasswordException extends Exception{
+    public WrongPasswordException() {
+    }
+
+    public WrongPasswordException(String message) {
+        super(message);
+    }
 }
+

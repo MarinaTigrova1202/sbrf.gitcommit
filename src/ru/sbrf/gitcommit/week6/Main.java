@@ -10,6 +10,8 @@ public class Main {
                 .orElse("у Марины нет почты");
         System.out.println(email);
 
+        Login.Autorisation("marina12", "11111", "11111");
+        System.out.println();
     }
 
 }
